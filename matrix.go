@@ -3,7 +3,7 @@ package sparse
 import (
 	"math/rand"
 
-	"github.com/james-bowman/sparse/blas"
+	"github.com/e-gun/sparse/blas"
 	"gonum.org/v1/gonum/mat"
 )
 

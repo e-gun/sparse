@@ -3,7 +3,7 @@ package sparse
 import (
 	"sync"
 
-	"github.com/james-bowman/sparse/blas"
+	"github.com/e-gun/sparse/blas"
 )
 
 const (

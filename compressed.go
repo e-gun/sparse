@@ -1,7 +1,7 @@
 package sparse
 
 import (
-	"github.com/james-bowman/sparse/blas"
+	"github.com/e-gun/sparse/blas"
 	"gonum.org/v1/gonum/mat"
 )
 
@@ -29,11 +29,11 @@ var (
 // of the slice contains the cumulative count of non zero values in the matrix up to row i-1 of the matrix.
 // In this way, it is possible to address any element, i j, in the matrix with the following:
 //
-// 		for k := c.indptr[i]; k < c.indptr[i+1]; k++ {
-//			if c.ind[k] == j {
-//				return c.data[k]
-//			}
+//	for k := c.indptr[i]; k < c.indptr[i+1]; k++ {
+//		if c.ind[k] == j {
+//			return c.data[k]
 //		}
+//	}
 //
 // It should be clear that CSR is like CSC except the slices are row major order rather than column major and
 // CSC is essentially the transpose of a CSR.
@@ -353,11 +353,11 @@ func (c *CSR) checkOverlap(a mat.Matrix) bool {
 // of the slice contains the cumulative count of non zero values in the matrix up to column i-1 of the matrix.
 // In this way, it is possible to address any element, j i, in the matrix with the following:
 //
-// 		for k := c.indptr[i]; k < c.indptr[i+1]; k++ {
-//			if c.ind[k] == j {
-//				return c.data[k]
-//			}
+//	for k := c.indptr[i]; k < c.indptr[i+1]; k++ {
+//		if c.ind[k] == j {
+//			return c.data[k]
 //		}
+//	}
 //
 // It should be clear that CSC is like CSR except the slices are column major order rather than row major and CSC
 // is essentially the transpose of a CSR.
